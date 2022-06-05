@@ -14,6 +14,7 @@
 #include <fcntl.h>
 
 #include <mmsystem.h>
+#pragma comment(lib,"winmm.lib")
 using namespace std;
 
 #define	BLACK 0

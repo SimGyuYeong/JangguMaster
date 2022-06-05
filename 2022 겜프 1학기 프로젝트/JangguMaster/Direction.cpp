@@ -125,6 +125,9 @@ void TitleLogoHide()
 		cout << "	                                                                                      ";
 		Sleep(50);
 	}
+
+	PlaySound(TEXT("Sakuranbo.wav"), NULL, SND_ASYNC);
+	_getch();
 }
 
 void Loading(Level level)
