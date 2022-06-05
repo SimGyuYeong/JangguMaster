@@ -1,0 +1,10 @@
+﻿  Direction.cpp
+C:\Users\USER\OneDrive\바탕 화면\2022 겜프 1학기 프로젝트\JangguMaster\Direction.cpp(8,2): warning C4129: '_': 문자 이스케이프 시퀀스를 인식할 수 없습니다.
+C:\Users\USER\OneDrive\바탕 화면\2022 겜프 1학기 프로젝트\JangguMaster\Direction.cpp(8,2): warning C4129: ' ': 문자 이스케이프 시퀀스를 인식할 수 없습니다.
+C:\Users\USER\OneDrive\바탕 화면\2022 겜프 1학기 프로젝트\JangguMaster\Direction.cpp(9,2): warning C4129: '_': 문자 이스케이프 시퀀스를 인식할 수 없습니다.
+C:\Users\USER\OneDrive\바탕 화면\2022 겜프 1학기 프로젝트\JangguMaster\Direction.cpp(36,20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\USER\OneDrive\바탕 화면\2022 겜프 1학기 프로젝트\JangguMaster\Direction.cpp(38,21): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\USER\OneDrive\바탕 화면\2022 겜프 1학기 프로젝트\JangguMaster\Direction.cpp(58,22): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\USER\OneDrive\바탕 화면\2022 겜프 1학기 프로젝트\JangguMaster\Direction.cpp(69,22): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\USER\OneDrive\바탕 화면\2022 겜프 1학기 프로젝트\JangguMaster\Direction.cpp(101,20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+  JangguMaster.vcxproj -> C:\Users\USER\OneDrive\바탕 화면\2022 겜프 1학기 프로젝트\JangguMaster\Debug\JangguMaster.exe
