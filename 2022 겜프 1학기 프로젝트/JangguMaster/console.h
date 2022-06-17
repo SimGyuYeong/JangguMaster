@@ -13,10 +13,15 @@
 #include <io.h>
 #include <fcntl.h>
 
+//사운드
 #include <mmsystem.h>
-#pragma comment(lib,"winmm.lib")
+#include <Digitalv.h>
+#include "resource.h"
+
+#pragma comment(lib,"winmm.lib") //링커->입력 에 라이브러리 추가
 using namespace std;
 
+//색코드 정의
 #define	BLACK 0
 #define BLUE 1
 #define GREEN 2
@@ -34,8 +39,16 @@ using namespace std;
 #define W_YELLOW 14
 #define LIGHT_WHITE 15
 
+//BGM 플레이
+void PlayingBgm(); 
+//효과음 플레이
+void PlayingEffect(); 
+
+//출력 좌표설정
 void SetPos(int x, int y);
-void setColor(int color, int backgroundColor = BLACK);
+//출력 색설정
+void SetColor(int color, int backgroundColor = BLACK);
+//전체화면모드
 void fullScreen();
 void FixScreenSize();
 

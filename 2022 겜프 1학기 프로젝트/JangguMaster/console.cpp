@@ -1,4 +1,40 @@
-#include "Console.h"
+#include "console.h"
+
+#pragma region 사운드 정의
+
+MCI_OPEN_PARMS OpenBgm; //BGM 여는 용도
+MCI_PLAY_PARMS PlayBgm; //BGM 실행할 용도
+
+MCI_OPEN_PARMS OpenEffect; //효과음 여는 용도
+MCI_PLAY_PARMS PlayEffect; //효과음 실행할 용도
+
+UINT dwID; //Device ID
+
+void PlayingBgm()
+{
+	//TEXT("내용") == L("내용")
+	OpenBgm.lpstrElementName = TEXT("Sakuranbo.wav");
+	OpenBgm.lpstrDeviceType = TEXT("waveaudio");
+
+	mciSendCommand(0, MCI_OPEN, MCI_OPEN_TYPE | MCI_OPEN_ELEMENT, (DWORD)(LPVOID) & OpenBgm);
+	dwID = OpenBgm.wDeviceID;
+	mciSendCommand(dwID, MCI_PLAY, MCI_DGV_PLAY_REPEAT, (DWORD)(LPVOID)&PlayBgm);
+}
+
+void PlayingEffect()
+{
+	//처음위치로 이동
+	mciSendCommand(dwID, MCI_SEEK, MCI_SEEK_TO_START, (DWORD)(LPVOID)&PlayEffect);
+
+	OpenEffect.lpstrElementName = L"pickupCoin.wav";
+	OpenEffect.lpstrDeviceType = L"waveaudio";
+
+	mciSendCommand(0, MCI_OPEN, MCI_OPEN_TYPE | MCI_OPEN_ELEMENT, (DWORD)(LPVOID)&OpenEffect);
+	dwID = OpenBgm.wDeviceID;
+	mciSendCommand(dwID, MCI_PLAY, MCI_NOTIFY, (DWORD)(LPVOID)&PlayEffect);
+}
+
+#pragma endregion
 
 void SetPos(int x, int y)
 {
@@ -10,7 +46,7 @@ void SetPos(int x, int y)
 	SetConsoleCursorPosition(hout, cur);
 }
 
-void setColor(int color, int backgroundColor )
+void SetColor(int color, int backgroundColor )
 {
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), (backgroundColor << 4) | color);
 }
